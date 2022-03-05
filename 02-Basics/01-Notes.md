@@ -135,3 +135,31 @@ console.log(selectedColors.length);
 ***
 ***
 # Functions
+```
+function greet(name) {
+    console.log('Hello World' + name);
+}
+
+// call the func - pass in the argument
+greet("Donovan");
+```
+* name is the paramater
+* "Donovan" is the argument used when calling the function
+* if your function uses 2 paramaters but you only provide one of the arguments - when the param value is used you will get undefined
+
+***
+***
+# Types of Functions
+* more function examples:
+```
+function square(number) {
+    return number * number;
+}
+
+let number = square(2);
+console.log(number); 
+// or console.log(square(2));
+```
+
+***
+***
