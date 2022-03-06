@@ -129,4 +129,15 @@ console.log(currentColor);
 ***
 ***
 # BitWise Operators
-* 
+* ```|``` represents a bitwise or (logical ors have a double ||)
+* bitwise operators operate on the individual binary bits
+* ```&``` bitwise and
+* "Bitwise operators in Javascript are mostly used for numerical conversions/computations, because sometimes they're much faster than their Math or parseInt equivalents."
+
+***
+***
+# Operators Precedence 
+* its best to use parentheses 
+
+***
+***
