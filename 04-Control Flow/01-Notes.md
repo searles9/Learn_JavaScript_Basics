@@ -113,4 +113,69 @@ do {
 ***
 ***
 # For ... in
-* 
+* used to iterate over the properties of an OBJECT
+* ex 1:
+```
+const person = {
+    name: "Donovan",
+    age: 21
+}
+
+for (let key in person)
+    console.log(key, person[key])   // key value
+```
+* ex 2: 
+* this will print the index of each item
+```
+const colors = {'red', 'blue', 'green'};
+
+for (let index in colors)
+    console.log(index)
+
+// this prints the element
+for (let index in colors)
+    console.log(index, colors[index]);
+```
+
+***
+***
+# For ... of 
+* new way to iterate over ARRAYS
+```
+for (let color of colors)
+    console.log(color);
+```
+
+***
+***
+# Break and Continue
+* break
+```
+let i = 0;
+
+while (i <= 10>) {
+    if (i === 5) break;
+
+    console.log(i);
+    i++;
+}
+```
+* continue:
+* if it sees the continue keywork it will skip the rest of the loop and start a new iteration
+* you wont use it too much - not great for code
+```
+let i = 0;
+
+while (i <= 10>) {
+    if (i % 2 === 0) {
+        i++;
+        continue;
+    }
+
+    console.log(i);
+    i++;
+}
+```
+
+***
+***
