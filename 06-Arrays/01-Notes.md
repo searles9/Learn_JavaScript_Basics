@@ -100,3 +100,27 @@ numbers.splice(2, 1);
 ***
 ***
 # Emptying an Array
+
+```
+let numbers = [1,2,3,4];
+
+// Solution 1 - reassign the var to an empty array
+// This only works if you dont have other refrences pointing to the var
+numbers = [];
+
+// Solution 2 - remove elements by setting the lenght 
+numbers.length = 0;
+
+// Solution 3 - splice
+numbers.splice(0, numbers.length);
+
+// solution 4 - pop
+while (numbers.length > 0)
+numbers.pop();
+```
+
+
+***
+***
+# Combining and Slicing Arrays
+* 
