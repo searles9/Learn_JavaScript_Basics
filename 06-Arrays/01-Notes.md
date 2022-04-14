@@ -225,4 +225,75 @@ courses.sort(function(a, b) {
 ***
 ***
 # Testing the elements of an array
-* 
+* every - checks all
+* some - checks for one 
+* these are new methods  
+
+```
+const numbers = [1, 2, 3]
+
+// checks all the values in the array
+// once it finds the odd number it stops
+const allPositive = numbers.every(function(value) {
+  return value >= 0;
+});
+
+// checks if some of the numbers are positive
+const atleastOnePosistive = numbers.some(function(value) {
+  return value >= 0;
+});
+```
+
+***
+***
+# Filtering an array
+
+```
+const numbers = [1, 2, 3, -4, 5]
+
+// filter to the positives only
+const filtered = numbers.filter(function(value) {
+    return value >= 0;
+});
+
+// arrow function version
+const filtered = numbers.filter(value => return value >= 0);
+
+// arrow function version again
+const filtered = numbers.filter(n => n >= 0);
+```
+
+***
+***
+# Mapping an array
+* map number to string
+```
+const numbers = [1, 2, 3, -4, 5]
+const filtered = numbers.filter(n => n >= 0);
+
+const items = filtered.map(n => '<li>' + n + '<li>');
+
+const html = '<ul>' + items.join('') '</ul>';
+console.log(html);
+
+```
+* map number to object
+```
+const numbers = [1, 2, 3, -4, 5]
+const filtered = numbers.filter(n => n >= 0);
+
+const items = filtered.map(n => ({ value: n}) );
+
+console.log(items);
+
+```
+* you could also chain them but meh:
+```
+const numbers = [1, 2, 3, -4, 5]
+const items = numbers
+                    .filter(n => n >= 0)
+                    .map(n => ({ value: n}) );
+
+console.log(items);
+
+```
