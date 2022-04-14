@@ -123,4 +123,27 @@ numbers.pop();
 ***
 ***
 # Combining and Slicing Arrays
-* 
+* slice an array into two parts
+```
+const first = [1, 2, 3];
+const second = [3, 4, 5];
+
+const combined = first.concat(second);
+
+const slice = combined.slice(2,4); // start at index 2 then go to 4
+```
+* if you have objects in the array, the refrences to those values are copied
+    * so if you change the object value it will change the value in the new slice array 
+
+***
+***
+# The Spread Operator 
+* the spread operator in ES6 can also combine 2 arrays 
+```
+const first = [1, 2, 3];
+const second = [3, 4, 5];
+
+const combined = [...first, ...second];
+
+const slice = combined.slice(2,4); // start at index 2 then go to 4
+```
