@@ -147,3 +147,82 @@ const combined = [...first, ...second];
 
 const slice = combined.slice(2,4); // start at index 2 then go to 4
 ```
+
+***
+***
+# Iterating over an array
+* you can use forEach method
+* there are many ways to iterate an array 
+* you dont get the index with the for of loop
+* you can use the for in loop to get the index tho
+```
+const numbers = [1, 2, 3];
+
+for (let number of numbers)
+    console.log(number);
+
+numbers.forEach(function(number) {
+  console.log(number);
+});
+
+// function syntax
+numbers.forEach(number => console.log(number));
+
+// with a second paramater
+numbers.forEach((number, index) => console.log(number, index));
+```
+
+***
+***
+# Joining arrays
+* when you are looking at documentation a "?" usually means the paramater is optional 
+
+```
+const numbers = [1, 2, 3];
+
+const joined = numbers.join(',');
+console.log(joined);
+```
+* split something:
+```
+const message = 'this is my first message';
+const parts = message.split(' ');
+console.log(parts);
+```
+
+***
+***
+# Sorting Arrays
+* there are build in sorting methods
+```
+const numbers = [2, 3, 1];
+
+numbers.sort();
+console.log(numbers);
+
+//reverse order
+numbers.reverse();
+```
+* when you have objects and such its harder to sort
+* sort is used for comparison
+```
+const courses = [
+    {id: 1, name: 'Node.js'},
+    {id: 2, name: 'JavaScript'},
+]
+
+courses.sort(function(a, b) {
+
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+
+    if (nameA < nameB) return -1;
+    if (nameA< nameB) return 1;
+    return 0;
+})
+```
+
+***
+***
+# Testing the elements of an array
+* 
