@@ -295,5 +295,26 @@ const items = numbers
                     .map(n => ({ value: n}) );
 
 console.log(items);
+```
 
+***
+***
+# Reducing an array
+* 
+```
+const numbers = [1, 2, -3, 4];
+
+let sum = 0;
+for (let n of numbers)
+  sum += n;
+
+console.log(sum)
+
+```
+* use the reduce medthod
+```
+// reduce it all to a single number
+numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 0);
 ```
