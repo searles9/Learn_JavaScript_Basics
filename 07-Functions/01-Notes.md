@@ -153,4 +153,46 @@ console.log(person);
 ***
 ***
 # Try and Catch
-* 
+
+```
+const person = {
+    firstName: 'Donovan',
+    lastName: 'Searles'
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`
+    },
+    set fullName(value) {
+        if (typeof value !== 'string')
+          throw new Error('Value is not a string');
+
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+try {
+  person.fullName = 'Donovan Searles';
+}
+catch (e) {
+    alert(e);
+}
+
+console.log(person);
+```
+
+***
+***
+# Local vs Global Scope
+* variables have scope
+
+***
+***
+# Let vs Var
+* use let not var
+
+***
+***
+# This keyword
+* this refrences the object that is executing the current function
+
